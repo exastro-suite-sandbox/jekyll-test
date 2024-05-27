@@ -1,0 +1,39 @@
+---
+commonAssetsUrl: "default text"
+---
+<!doctype html>
+<html>
+<head>
+<!-- {{ site.url }} -->
+{% if site.url contains "katokeita1" %}
+    {% assign devFlag = true %}
+    {% assign commonAssetsUrl = "https://staging.exastro.org" %}
+{% else %}
+    {% assign devFlag = false %}
+    {% assign commonAssetsUrl = "https://www.exastro.org" %}
+{% endif %}
+{% unless devFlag %}
+<!-- test -->
+{% endunless %}
+
+<meta charset="utf-8">
+<title>Jekyll test page</title>
+
+<link rel="stylesheet" type="text/css" href="https://exastro-suite.github.io/docs/asset/css/common.css">
+</head>
+
+<body>
+
+    <div id="articleBody">
+        <section>
+            <div class="sectionInner">
+                <div id="faqContent">
+                    <div class="faqList">
+{{content}}
+                    </div>
+                </div>
+            </div>
+        </section>    
+    </div>
+</body>
+</html>
