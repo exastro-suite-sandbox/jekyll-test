@@ -9,16 +9,18 @@ layout: common
     {% for newsItem in newsData[1] %}
 <li id="{{ newsItem.id }}">
     <dl>
-        <dt class="image">
+        {% if newsItem.image %}<dt class="image">
             <a href="{{ newsItem.url }}" class="touch" target="_blank" rel="noopener">
-                <img src="{{ newsItem.image | relative_url }}" alt="{{ newsItem.title | replace: '\n', '' }}">
+                <img src="{{ newsItem.image | relative_url }}" alt="{{ newsItem.title | replace: '\\n', '' }}">
             </a>
-        </dt>
+        </dt>{% endif %}
+        {% if newsItem.videoId %}<dt class="newsRoomVideoWrap">
+            <span class="newsRoomVideo youtubeEmbed" data-embed-id="{{ newsItem.videoId }}"><span id="{{ newsItem.videoId }}"></span></span>
+        </dt>{% endif %}
         <dd class="title">
             <a href="{{ newsItem.url }}" target="_blank" rel="noopener">
-                <span class="mainTitle">{{ newsItem.title | replace: '\n', '<br>' }}</span>
+                <span class="mainTitle">{{ newsItem.title | replace: '\\n', '<br>' }} <i class="fas fa-external-link-alt"></i></span>
                 {% if newsItem.subTitle %}<span class="subTitle">{{ newsItem.subTitle }}</span>{% endif %}
-                <i class="fas fa-external-link-alt"></i>
             </a>
         </dd>
         <dd class="meta">
