@@ -1,22 +1,39 @@
 {
     "2024": [
         {
-            "title": "タイトル",
-            "publication": "掲載",
-            "date": "2024/8/1",
+            "id": "2024080101",
+            "title": "タイトル\nタイトル",
+            "subTitle": "サブタイトル",
+            "media": "掲載",
+            "date": "2024/08/01",
             "url": "https://example.com",
-            "image": "/news/images/"
+            "youtube": "Tk7dqrGmIb4",
+            "document": [
+                {
+                    "icon": "video",
+                    "title": "ドキュメント",
+                    "url": "test",
+                    "note": "※テスト"
+                },
+                {
+                    "icon": "video",
+                    "title": "ドキュメント",
+                    "url": "test"
+                }
+            ]
         },
         {
+            "id": "",
             "title": "タイトル",
-            "publication": "掲載",
+            "media": "掲載",
             "date": "2024/7/1",
             "url": "https://example.com",
             "image": "/news/images/"
         },
         {
+            "id": "",
             "title": "タイトル",
-            "publication": "掲載",
+            "media": "掲載",
             "date": "2024/6/1",
             "url": "https://example.com",
             "image": "/news/images/"
@@ -24,29 +41,33 @@
     ],
     "2023": [
         {
+            "id": "",
             "title": "タイトル",
-            "publication": "掲載",
+            "media": "掲載",
             "date": "2023/8/1",
             "url": "https://example.com",
             "image": "/news/images/"
         },
         {
+            "id": "",
             "title": "タイトル",
-            "publication": "掲載",
+            "media": "掲載",
             "date": "2023/7/1",
             "url": "https://example.com",
             "image": "/news/images/"
         },
         {
+            "id": "",
             "title": "タイトル",
-            "publication": "掲載",
+            "media": "掲載",
             "date": "2023/6/1",
             "url": "https://example.com",
             "image": "/news/images/"
         },
         {
+            "id": "",
             "title": "タイトル",
-            "publication": "掲載",
+            "media": "掲載",
             "date": "2023/5/1",
             "url": "https://example.com",
             "image": "/news/images/"
