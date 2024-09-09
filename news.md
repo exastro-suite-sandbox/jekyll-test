@@ -5,8 +5,8 @@ layout: common
 ## NEWS
 
 <ul>
-{% for year in site.data.news %}
-    {% for item in year %}
+{% for newsYearList in site.data.news %}
+    {% for item in newsYearList[1] %}
 
 <li id="news20230222">
     <dl>
