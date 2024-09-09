@@ -11,7 +11,7 @@ layout: common
     <dl>
         {% if newsItem.image %}<dt class="image">
             <a href="{{ newsItem.url }}" class="touch" target="_blank" rel="noopener">
-                <img src="{{ newsItem.image | relative_url }}" alt="{{ newsItem.title | replace: '\\n', '' }}">
+                <img src="{{ newsItem.image | relative_url }}" alt="{{ newsItem.title | replace: "タイト", "" }}">
             </a>
         </dt>{% endif %}
         {% if newsItem.videoId %}<dt class="newsRoomVideoWrap">
@@ -19,7 +19,7 @@ layout: common
         </dt>{% endif %}
         <dd class="title">
             <a href="{{ newsItem.url }}" target="_blank" rel="noopener">
-                <span class="mainTitle">{{ newsItem.title | replace: '\\n', '<br>' }} <i class="fas fa-external-link-alt"></i></span>
+                <span class="mainTitle">{{ newsItem.title | replace: "\n", "<br>" }} <i class="fas fa-external-link-alt"></i></span>
                 {% if newsItem.subTitle %}<span class="subTitle">{{ newsItem.subTitle }}</span>{% endif %}
             </a>
         </dd>
