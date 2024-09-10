@@ -2,8 +2,8 @@
     "2024": [
         {
             "id": "2024080101",
-            "title": "タイトル<br>タイトル",
-            "subTitle": "サブタイトル",
+            "title": "タイトル\nタイトル",
+            "subTitle": "サブタイトル\nサブタイトル<TEST></TEST>",
             "media": "掲載",
             "date": "2024/08/01",
             "url": "https://example.com",
