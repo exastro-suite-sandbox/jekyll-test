@@ -41,7 +41,7 @@ layout: common
             </a>
         </dd>
         {% endfor %}{% endif %}
-        {% capture i %}{% i | plus: 1 %}{% endcapture %}
+        {% capture i %}{{ i | plus: 1 }}{% endcapture %}
     </dl>
 </li>
     {% endfor %}
