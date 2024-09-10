@@ -9,6 +9,7 @@ layout: common
 <ul>
 {% for newsData in site.data.news %}
     {% for newsItem in newsData[1] %}
+        {% increment i %}
         {% if i == 4 %}{% break %}{% endif %}
 <li id="{{ newsItem.id }}">
     <dl>
@@ -40,8 +41,8 @@ layout: common
                 <i class="fas fa-video"></i> {{ documentItem.title }} <i class="fas fa-external-link-alt">{% if documentItem.note %}<br>{{ documentItem.note }}{% endif %}</i>
             </a>
         </dd>
-        {{ i | plus: 1 }}
         {% endfor %}{% endif %}
+        
     </dl>
 </li>
     {% endfor %}
