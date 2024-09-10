@@ -9,7 +9,6 @@ layout: common
 <ul>
 {% for newsData in site.data.news %}
     {% for newsItem in newsData[1] %}
-        {% increment i %}
         {% if i == 4 %}{% break %}{% endif %}
 <li id="{{ newsItem.id }}">
     <dl>
@@ -42,7 +41,7 @@ layout: common
             </a>
         </dd>
         {% endfor %}{% endif %}
-        
+        {% capture i %}{% i | plus: 1 %}{% endcapture %}
     </dl>
 </li>
     {% endfor %}
