@@ -4,14 +4,17 @@ layout: common
 
 ## NEWS
 
+{% assign i = 0 %}
+
 <ul>
 {% for newsData in site.data.news %}
     {% for newsItem in newsData[1] %}
+        {$ if i == 4 %}{% break %}{% endif %}
 <li id="{{ newsItem.id }}">
     <dl>
         {% if newsItem.image %}<dt class="image">
             <a href="{{ newsItem.url }}" class="touch" target="_blank" rel="noopener">
-                <img src="{{ newsItem.image | relative_url }}" alt="{{ newsItem.title | replace: '<br>', '' | xml_escape }}">
+                <img src="{{ newsItem.image | relative_url }}" alt="{{ newsItem.title | xml_escape }}">
             </a>
         </dt>{% endif %}
         {% if newsItem.videoId %}<dt class="newsRoomVideoWrap">
@@ -37,11 +40,18 @@ layout: common
                 <i class="fas fa-video"></i> {{ documentItem.title }} <i class="fas fa-external-link-alt">{% if documentItem.note %}<br>{{ documentItem.note }}{% endif %}</i>
             </a>
         </dd>
+        {{ i | plus: 1 }}
         {% endfor %}{% endif %}
     </dl>
 </li>
     {% endfor %}
 {% endfor %}
 </ul>
+
+
+
+## Date
+
+{{ "2024-01-01" | date: "%Y%m%d" }}
 
 
