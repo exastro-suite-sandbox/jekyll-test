@@ -8,16 +8,16 @@ layout: common
 
 <ul>
 {% for newsData in site.data.news %}
-    {% if i == 4 %}
+    {% if i > 4 %}
         TTEST BREAK
         {% break %}
     {% endif %}
     {% for newsItem in newsData[1] %}
-        {% if i == "4" %}
-            BREAK
+        {% if i > 4 %}
+            for BREAK
             {% break %}
         {% endif %}
-        {{ i }}
+        count: {{ i }}
 <li id="{{ newsItem.id }}">
     <dl>
         {% if newsItem.image %}<dt class="image">
@@ -49,7 +49,7 @@ layout: common
             </a>
         </dd>
         {% endfor %}{% endif %}
-        {% capture i %}{{ i | plus: 1 }}{% endcapture %}
+        {% assign i = i | plus: 1 %}
     </dl>
 </li>
     {% endfor %}
