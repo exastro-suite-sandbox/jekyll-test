@@ -8,8 +8,10 @@ layout: common
 
 <ul>
 {% for newsData in site.data.news %}
+    {% if i == 4 %}{% break %}{% endif %}
     {% for newsItem in newsData[1] %}
         {% if i == 4 %}{% break %}{% endif %}
+        {{ i }}
 <li id="{{ newsItem.id }}">
     <dl>
         {% if newsItem.image %}<dt class="image">
