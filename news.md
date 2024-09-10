@@ -8,9 +8,15 @@ layout: common
 
 <ul>
 {% for newsData in site.data.news %}
-    {% if i == 4 %}{% break %}{% endif %}
+    {% if i == 4 %}
+        TTEST BREAK
+        {% break %}
+    {% endif %}
     {% for newsItem in newsData[1] %}
-        {% if i == 4 %}{% break %}{% endif %}
+        {% if i == "4" %}
+            BREAK
+            {% break %}
+        {% endif %}
         {{ i }}
 <li id="{{ newsItem.id }}">
     <dl>
