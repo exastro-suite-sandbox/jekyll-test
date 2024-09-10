@@ -30,7 +30,7 @@ layout: common
         </dt>{% endif %}
         <dd class="title">
             <a href="{{ newsItem.url }}" target="_blank" rel="noopener">
-                <span class="mainTitle">{{ newsItem.subTitle | escape | newline_to_br }} <i class="fas fa-external-link-alt"></i></span>
+                <span class="mainTitle">{{ newsItem.title | escape | newline_to_br }} <i class="fas fa-external-link-alt"></i></span>
                 {% if newsItem.subTitle %}<span class="subTitle">{{ newsItem.subTitle | escape | newline_to_br }}</span>{% endif %}
             </a>
         </dd>
